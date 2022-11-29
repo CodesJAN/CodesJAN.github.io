@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .D1{          
+           text-align: center;
+        }        
+        h1{
+           display: inline;                    
+        }
+        .CU{
+            color:rgba(155, 148, 108, 0.719);
+            font-size: 30px;           
+        }
+        .P1{
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+       .BOX1{
+            width: 1200px;            
+            display: flex;
+            flex-direction: row;     /*水平排列*/
+            
+       }
+       .BOX2{
+            display: flex;
+            flex-direction: column;  /*垂直排列*/                      
+            width: 340px;
+            padding: 20px;
+            margin: 10px;
+       }     
+       .BOXL1,.BOXL2,.BOXL3{
+             display: flex;
+             flex-direction: row;                           
+             margin: 20px;
+       }
+       .BOXR1,.BOXR2,.BOXR3{
+             display: flex;
+             flex-direction: row-reverse;                       
+             margin: 20px
+       }
+       .CIRCLE{
+             width: 120px;
+             height: 80px;
+             border-radius:50%; 
+             overflow:hidden;
+       }
+       .PR{
+            color:rgba(155, 148, 108, 0.719) ;
+            font-weight: bolder;
+       }
+       .PL{
+            color:rgba(155, 148, 108, 0.719) ;
+            font-weight: bolder;
+            text-align: right;
+       }
+      
+    </style>
+
+    <div class="D1">    
+        <h1>Why is the last</h1> <h1 class="CU">Merry Xmas</h1>
+
+        <p class="P1">Last Christmas I gave you my heart
+            But the very next day you gave it away
+            This year, to save me from tears
+            I'll give it to someone special
+            Once bitten and twice shy
+            I keep my distance, but you still catch my eye
+            Tell me baby, do you recognize me?
+            Well, it's been a year, it doesn't surprise me
+            Happy Christmas, I wrapped it up and sent it
+            With a note saying "I love you"</p>
+     </div>
+
+    
+<div class="BOX1">
+    <div class="BOX2">
+        <div class="BOXL1">
+            <div>
+                <p class="PL">Santa Claus</p>
+                <p>We wish you a merry Christmas and a happy new year.</p>                    
+            </div>
+            <div class="CIRCLE">
+                <img src="san.jpg" width="90" height="90" alt="">
+            </div>               
+        </div>
+        <div class="BOXL2">
+            <div>
+                <p class="PL">Reindeer</p>
+                <p>We wish you a merry Christmas and a happy new year.</p>                
+            </div>
+            <div class="CIRCLE">
+                <img src="deer.jpg" width="90" height="90" alt="">
+            </div>
+        </div>
+        <div class="BOXL3">
+            <div>
+                <P class="PL">Socks</P>
+                <p>We wish you a merry Christmas and a happy new year.</p>               
+            </div>
+            <div class="CIRCLE">
+                <img src="socks.jpg" width="90" height="90" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="BOX2">   
+    <img src="xmas.png" width="340" height="500" alt="聖誕樹">    
+    </div>
+
+    <div class="BOX2">
+        <div class="BOXR1">
+            <div>
+                <p class="PR">Gifts</p>
+                <p >We wish you a merry Christmas and a happy new year.</p> 
+            </div>
+            <div class="CIRCLE">
+                <img src="gifts.jpg" width="90" height="90" alt="">
+            </div>
+        </div>
+        <div class="BOXR2">
+            <div>
+                <p class="PR">Candy</p>
+                <p>We wish you a merry Christmas and a happy new year.</p>
+            </div>
+            <div class="CIRCLE">
+                <img src="candy.jpg" width="90" height="90" alt="">
+            </div>
+        </div>
+        <div class="BOXR3">
+            <div>
+                <p class="PR">Snowman</p>
+                <p>We wish you a merry Christmas and a happy new year.</p>
+            </div>
+            <div class="CIRCLE">
+                <img src="snow.jpg" width="90" height="90" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
