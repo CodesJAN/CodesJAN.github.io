@@ -5,10 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .sky{
+            background-color: azure;
+        }
+        .hw1,.hw2,.hw3{
+            width: 100px;
+            height: 100px;
+            background-color:aquamarine;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .problem{
+            background-color:gainsboro;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <a href="/HWA/HW_01.html">作業1</a>
-    <a href="/TimeTable/HW2-1.html">課表</a>
-    <a href="/WhosCall/HW2-2.html">Whoscall</a>
+    <div class="sky">
+         <div class="hw1"><a href="/HWA/HW_01.html">作業1</a></div>
+         <div class="hw2"><a href="/TimeTable/HW2-1.html">課表</a></div>
+         <div class="hw3"><a href="/WhosCall/HW2-2.html">Whoscall</a></div>
+    </div>
+    <div>
+        <div class="problem">
+         1.第二個區塊內的background-image顯示不完整,不知道是否因寬限制960px導致,<br>
+        有設定過background-position&background-size還是無法與原網站相同<br>
+        <br>
+         2.第二個區塊內左上&右下的圖上不去,有用過都設定background-image,<br>
+         但會被覆蓋掉,用div放img再去調整位置則會擠壓到區塊內其他物件,<br>
+         上border發現原圖的多餘空白區塊太多<br>
+         <br>
+         3.在區塊內文字非置中也非置左or右的狀況時遇到困難,<br>
+         用padding&margin的top bottom left去位移到想要的位置,不知在實務上是正常做法<br>
+         還是一個笨蛋的硬做法?<br>
+         <br>
+         4.要調整不同行文字間距離,原本用div裡面包著p,想藉由對該div中的padding設定0來縮減兩者的距離,<br>
+         但發現此設定會沒有效果<br>
+         <br>
+         5.button&超連結的用法不熟悉,不知道如何在點擊button的時候觸動超連結,<br>
+         硬在button區塊內加入超連結,又會把原本設定好的button外觀破壞掉<br>
+         <br>
+         6.兩個綠點點的圖給得跟原網方向相反,給的圖檔不能用小畫家修改,不知道怎麼把它轉向<br>
+         <br>
+         7.這次作業運用到很多區塊內物件的位置分配,弄熟justify-content&align-content後<br>
+         可以處理大部分狀況,但當圖過大或是區塊內物件太多時會發生擠壓變形,<br>
+         改變圖的大小又會讓圖比例怪怪的  
+        </div>
+    </div>
+    
 </body>
 </html>
