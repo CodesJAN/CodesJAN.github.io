@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sky{
+            width: 960px;
+        }
+        .d1{
+            width: 960px;
+            background-color: white;
+            display: flex;
+            height: 70px;  
+            align-items: center; 
+            padding: 5px;      
+            box-shadow:0px 0px 5px rgb(65, 63, 63);  
+            margin-bottom: 3px;                                         
+        }
+        .d11{
+             width: 130px;
+             height: 60px;             
+             margin: 10px;
+             display: flex;
+             align-items: center;           
+        }
+        .d12{
+            margin: 10px;
+            font-weight: bold;           
+        }
+        .d13{
+            margin-left: 80px;
+            width: 110px;
+            height: 35px;
+        }
+        .d13bt{
+            border-radius: 30px;
+            background-color: #08c708;
+            border: none; 
+            width: 100%;
+            height: 100%;             
+            color: white;
+            font-size: 15px;  
+            font-weight: bold;        
+        }
+        .d2{
+            width: 960px;                    
+            background-image: url(/WhosCall/whospic/d2img.jpg);                     
+            background-position: center;  
+            display: flex;
+            flex-direction: column;
+        }
+        .d2p1{
+            font-size: 50px;
+            font-weight: bold;
+            color: #08c708;
+            margin-bottom: 8px;  
+            padding-left: 120px;   
+        }
+        .d2p2{
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 120px;
+        }
+        .d2p4{
+            color: #08c708;
+            font-weight: bold;
+            padding-left: 140px;
+            padding-bottom: 50px;
+        }
+        .d23{
+            padding-left: 120px;
+            width: 210px;
+            height: 50px;
+        }
+        .d23bt{
+            border-radius: 30px;
+            background-color: #08c708;
+            border: none; 
+            width: 100%;
+            height: 100%;             
+            color: white;
+            font-size: 22px;  
+            font-weight: bold;        
+        }
+        .d3{
+            text-align: center;
+            padding: 55px;              /*跟D2.D4的距離*/
+            font-size: larger;
+        }
+        .d3p1{
+            font-size: 23px;
+            font-weight: bold;          
+            margin: 5px;
+        }
+        .d3p2{
+            padding: 0ch;            
+        }
+        .d3p21{
+            display: inline;
+            font-size:33px;
+            font-weight:bold;                                
+        }
+        .d3p22{
+            color:#08c708;  
+            display: inline; 
+            font-weight: bold;
+            font-size:35px;                           
+        }
+        .d3p3{
+            font-weight: bold;
+            font-size: 33px;         
+            padding: 1px;
+        }
+        .d3p4{
+            color: gray;
+            font-size: 14px;
+            font-weight: bold;           
+            padding-top: 15px;     /*跟上面文字的距離*/
+        }
+        .d4,.d5,.d6{
+            display: flex;
+            flex-direction: row;   /*水平*/
+            justify-content: center; 
+            margin-bottom: 10px;                    
+        }
+        .d41,.d51,.d61{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            margin: 30px;          /*跟圖間距*/   
+        }
+        .d4p1,.d5p1,.d6p1{
+            color: #08c708;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .d4p2,.d5p2,.d6p2{
+            font-weight: bold;
+            font-size: 20px;                     
+        }            
+        .d4p3{
+            color: gray;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 10px;
+        }       
+        .d7{
+            width: 960px;
+            background-color: rgb(244, 244, 244);           
+            margin-top: 50px;
+        }
+        .d7up,.d8up{
+              text-align: center;
+              font-size: 35px;
+              font-weight: bold;
+              padding-top: 50px;
+        }
+        .d7down{
+            display: flex;
+            justify-content: center
+        }
+        .d71,.d72,.d73{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 35px;
+        }
+        .d7p{
+            text-align: center;
+        }
+        .d7p1{
+            font-weight: bold;
+            font-size: 20px;
+            padding: 0ch;
+        }
+        .d8{
+            width: 960px;
+        }
+        .d8down{
+            display: flex;
+            margin-top: 50px;
+        }
+        .d81,.d82,.d83{
+            width: 280px;
+            display: flex;
+            flex-direction: column;          
+            padding: 10px;
+            margin: 10px;
+            box-shadow:0px 0px 5px rgb(65, 63, 63);
+        }
+        .d8p1{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .d8i1{
+            margin-top: 15px;
+            text-align: right;         
+        }
+        .d9{
+            width: 960px;
+            background-color: rgb(244, 244, 244);
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 30px;
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+        .d9p1{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .d9p2{
+            font-weight: bold;
+            color:#08c708          
+        }
+        .d10{
+            width: 960px;
+            height: 300px;
+            background-image: url(/WhosCall/whospic/uu.jpg);
+            background-size:100% 100% ;
+            display: flex;
+        }
+        .d101,.d102,.d103{
+            color: white;
+            margin: 30px;
+        }
+        .d10p{
+            margin: 10px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="sky">
+         <div class="d1">
+             <div class="d11"><img src="/WhosCall/whospic/asset 6.svg" height="25" alt=""></div>
+              <div class="d12">Whoscall 進階版</div>
+             <div class="d12">Whoscall 認證號碼</div>
+             <div class="d12">認識Whoscall</div>
+             <div class="d12">Whoscall 專欄</div>
+             <div class="d12">常見問題</div>
+             <div class="d13"><button class="d13bt">免費下載</button></div>
+         </div>
+         <div class="d2">       
+             <p class="d2p1">whoscall認證號碼</p>
+             <p class="d2p2">電話接通前<br>讓專業形象為你開場!</p>
+             <div class="d23"><button class="d23bt">立即申請</button></div>
+             <p class="d2p4">企業方案優惠 $200/月 起</p>                    
+          </div>
+          <div class="d3">
+             <div><p class="d3p1">根據市場調查顯示</p></div>
+             <div class="d3p2">
+                 <p class="d3p21">超過</p>
+                 <p class="d3p22">60%</p>
+                 <p class="d3p21">的民眾會選擇忽視或</p>
+            </div>
+             <div class="d3p3">拒接陌生來電。</div>
+             <div class="d3p4">※Pollster 波仕特線上市調 (2014)</div>
+          </div>
+          <div class="d4">
+             <div class="d41">
+                <div class="d4p1">提高2倍電話接聽意願</div>
+                <div class="d4p2">Whoscall 認證號碼讓您在全台百萬用戶<br>的來電視窗，顯示公司名稱、姓名等資<br>訊。從此不再是客戶的陌生來電！</div>
+                <div class="d4p3">※Whoscall 調查 (2018)</div>
+             </div>
+             <div class="d42"><img src="/WhosCall/whospic/asset 0.webp" alt=""></div>
+          </div>
+          <div class="d5">
+            <div class="d52"><img src="/WhosCall/whospic/asset 1.webp" alt=""></div>
+            <div class="d51">
+               <div class="d5p1">創造主動回撥的潛在客戶</div>
+               <div class="d5p2">在來電記錄中，留下最佳企業形象，創<br>造客戶主動聯繫的契機。</div>    
+            </div>           
+         </div>
+         <div class="d6">
+            <div class="d61">
+               <div class="d6p1">眾多來電一秒看見</div>
+               <div class="d6p2">不在客戶的通訊錄裡，也能於通話紀錄<br>顯示企業資訊，輕鬆提升工作效率與拓<br>客成功率。</div>              
+            </div>
+            <div class="d62"><img src="/WhosCall/whospic/asset 2.webp" alt=""></div>
+         </div>
+         <div class="d7">
+            <div class="d7up">拓展業務的最佳夥伴！</div>
+            <div class="d7down">
+                <div class="d71">
+                    <div><img src="/WhosCall/whospic/asset 3.svg" width="150" alt=""></div>
+                    <div class="d7p">
+                        <div><p class="d7p1">實名認證</p></div>
+                        <div><p>Whoscall 嚴謹的實名審核，讓<br>認證過的電話號碼更值得信任。</p></div>
+                    </div>
+                </div>
+                <div class="d72">
+                     <div><img src="/WhosCall/whospic/asset 4.svg" width="150" alt=""></div>
+                     <div class="d7p">
+                        <div><p class="d7p1">支援手機雙系統</p></div>
+                        <div><p>支援在 iOS 與 Android 系統上<br>的來電顯示，全台潛在客戶一網<br>打盡。</p></div>
+                     </div>
+                </div>
+                <div class="d73">
+                    <div><img src="/WhosCall/whospic/asset 5.svg" width="150" alt=""></div>
+                    <div class="d7p">
+                        <div><p class="d7p1">一對一專人服務</p></div>
+                        <div><p>專人服務、輕鬆申請<br>認證流程不再複雜惱人。</p></div>
+                            
+                    </div>
+                </div>
+            </div>
+         </div>
+        <div class="d8"></div> 
+          <div class="d8up">用戶經驗分享</div>
+          <div class="d8down">
+            <div class="d81">
+                <div><img src="/WhosCall/whospic/asset 9.svg" alt=""></div>
+                <div><p class="d8p1">沒想到更多客戶主動回<br>電!</p></div>
+                <div>申請Whoscall認證號碼後，業務撥打<br>出去的未接來電，客戶更樂意回電了，<br>保險方案的介紹與推動也比以前更及時<br>有效!</div>
+                <div class="d8i1"><img src="/WhosCall/whospic/b1.jpg" width="200" height="60" alt=""></div>
+            </div>
+            <div class="d82">
+                <div><img src="/WhosCall/whospic/asset 9.svg" alt=""></div>
+                <div><p class="d8p1">高接聽率讓合作更有效<br>率!</p></div>
+                <div>設定Whoscall認證號碼後，電商客戶<br>的接聽率明顯比以前高很多!和客戶討<br>論案子的速度更順利、也能更及時給客<br>戶完整的營運建議!</div>
+                <div class="d8i1"><img src="/WhosCall/whospic/b2.jpg" width="200" height="60" alt=""></div>
+            </div>
+            <div class="d83">
+                <div><img src="/WhosCall/whospic/asset 9.svg" alt=""></div>
+                <div><p class="d8p1">接聽意願提高，配送更快<br>速!</p></div>
+                <div>透過Whoscall Number服務，讓顧客<br>接聽意願變高，也讓我們的物流司機更<br>容易掌握顧客的狀況，網購商品能更及<br>時且有效率的送達。</div>
+                <div class="d8i1"><img src="/WhosCall/whospic/b3.jpg" width="200" height="60" alt=""></div>
+            </div>
+          </div>
+          <div class="d9">
+            <div><p class="d9p1">馬上申請企業專屬認證號碼！</p></div>
+            <div><p class="d9p2">每筆 $200/月 起，申辦號碼越多、優惠更多！</p></div>
+          </div>
+        <div class="d10">
+            <div class="d101">
+                <div class="d10p">Whoscall</div>
+                <div class="d10p">認識Whoscall</div>
+                <div class="d10p">Whoscall進階版</div>
+                <div class="d10p">Whoscall專欄</div>
+                <div class="d10p">Whoscall認證號碼</div>
+            </div>
+            <div class="d102">
+                <div class="d10p">公司</div>
+                <div class="d10p">工作機會</div>
+                <div class="d10p">媒體中心</div>
+                <div class="d10p">最新消息</div>
+                <div class="d10p">品牌識別</div>
+            </div>
+            <div class="d103">
+                <div class="d10p">客戶服務</div>
+                <div class="d10p">安全性</div>
+                <div class="d10p">常見問題</div>
+                <div class="d10p">聯絡我們</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
