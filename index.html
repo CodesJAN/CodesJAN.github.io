@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        a:link{
+            color: unset;
+        }
+        a{
+            text-decoration:none;
+        }
         .sky{
             background-color: azure;
         }
-        .hw1,.hw2,.hw3{
-            width: 100px;
-            height: 100px;
+        .hw{
+            width: 120px;
+            height: 120px;
             background-color:aquamarine;
             margin: 5px;
             display: flex;
@@ -27,29 +33,12 @@
 </head>
 <body>
     <div class="sky">
-         <div class="hw1"><a href="/HWA/HW_01.html">作業1</a></div>
-         <div class="hw2"><a href="/TimeTable/HW2-1.html">課表</a></div>
-         <div class="hw3"><a href="/WhosCall/HW2-2.html">Whoscall</a></div>
+         <div class="hw"><a href="/HWA/HW_01.html">作業1</a></div>
+         <div class="hw"><a href="/TimeTable/HW2-1.html">課表</a></div>
+         <div class="hw"><a href="/WhosCall/HW2-2.html">Whoscall</a></div>
+         <div class="hw"><a href="/Whoscall.V2/Whoscall.html">Whoscall 新版</a></div>
     </div>
-    <div>
-        <div class="problem">
-         1.第二個區塊內的background-image顯示不完整,不知道是否因寬限制960px導致,<br>
-        有設定過background-position&background-size還是無法與原網站相同<br>
-        <br>
-         2.第二個區塊內左上&右下的圖上不去,有用過都設定background-image,<br>
-         但會被覆蓋掉,用div放img再去調整位置則會擠壓到區塊內其他物件,<br>
-         上border發現原圖的多餘空白區塊太多<br>
-         <br>
-         3.在區塊內文字非置中也非置左or右的狀況時遇到困難,<br>
-         用padding&margin的top bottom left去位移到想要的位置,不知在實務上是正常做法<br>
-         還是一個笨蛋的硬做法?<br>
-         <br>
-         4.要調整不同行文字間距離,原本用div裡面包著p,想藉由對該div中的padding設定0來縮減兩者的距離,<br>
-         但發現此設定會沒有效果<br>
-         <br>
-         5.第一個區域是會隨著網頁下滑一直置於網頁頂端,不知道是甚麼效果
-        </div>
-    </div>
+    
     
 </body>
 </html>
