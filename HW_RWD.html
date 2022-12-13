@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .card{
+            display: flex;
+            box-sizing: border-box;
+            padding: 10px;
+            outline: 1px solid black;
+            margin: 15px;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 20px;
+            width: 60%;
+        }
+        .pic{
+            width: 40%;   
+        }
+        .pic img{
+            width: 100%;
+        }
+        @media screen and (min-width:768px){
+            .wrap{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1200px;
+                margin: auto;
+            }
+            .card{
+                flex-direction: column;
+                width: 29.427083%;
+                margin: 1.953125%;
+            }
+            .text{
+                width: 100%;
+                margin: auto;
+            }
+            .pic{
+                width: 100%;
+                margin: auto;
+            }
+        }
+        @media screen and (min-width:1200px){
+            .card{
+                flex-direction: row;
+            }
+            .card:nth-child(-n+2){
+                width: 48%;
+                margin: 1%;
+            }
+            .text:nth-child(-n+2){
+                margin-left: 20px;
+                width: 60%;
+            }
+            .pic:nth-child(-n+2){
+                width: 40%;
+            }
+            /*----------------------------------*/
+            .card:nth-child(n+3){
+                width: 22.5%;
+                margin: 1.25%;
+                padding: 0;
+                position: relative;
+                overflow: hidden;
+            }
+            .card:nth-child(n+3) .text{
+                width: 100%;
+                height: 100%;
+                margin-left: 0;
+                padding: 5px;
+                position: absolute;
+                box-sizing: border-box;
+                background-color: #0008;
+                opacity: 0.5;
+                color: white;
+                transition: 1s;
+            }
+            .card:nth-child(n+3) .pic{
+                width: 100%;
+            }
+            .card:nth-child(n+3) .pic img{
+                width: 100%;
+                vertical-align: top;
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="pic"><img src="https://picsum.photos/300/200/?random=10"></div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, nam labore eum quisquam eius soluta fugiat corporis dicta excepturi tempore doloremque deserunt consequuntur perspiciatis at nostrum! Non iste doloribus nisi?</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic"><img src="https://picsum.photos/300/200/?random=10"></div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, nam labore eum quisquam eius soluta fugiat corporis dicta excepturi tempore doloremque deserunt consequuntur perspiciatis at nostrum! Non iste doloribus nisi?</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic"><img src="https://picsum.photos/300/200/?random=10"></div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, nam labore eum quisquam eius soluta fugiat corporis dicta excepturi tempore doloremque deserunt consequuntur perspiciatis at nostrum! Non iste doloribus nisi?</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic"><img src="https://picsum.photos/300/200/?random=10"></div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, nam labore eum quisquam eius soluta fugiat corporis dicta excepturi tempore doloremque deserunt consequuntur perspiciatis at nostrum! Non iste doloribus nisi?</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic"><img src="https://picsum.photos/300/200/?random=10"></div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, nam labore eum quisquam eius soluta fugiat corporis dicta excepturi tempore doloremque deserunt consequuntur perspiciatis at nostrum! Non iste doloribus nisi?</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic"><img src="https://picsum.photos/300/200/?random=10"></div>
+            <div class="text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, nam labore eum quisquam eius soluta fugiat corporis dicta excepturi tempore doloremque deserunt consequuntur perspiciatis at nostrum! Non iste doloribus nisi?</p>
+            </div>
+        </div>      
+    </div>
+</body>
+</html>
