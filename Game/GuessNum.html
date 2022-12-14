@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .world{
+            background-image: url(/Game/epic/kv.jpg);
+            background-size: 95%;
+            width: 1200px;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: top center;
+            display: flex;
+            flex-direction: row;
+            padding-top: 140px;
+            /* border: 1px solid red; */
+        }
+        .main{
+            /* border: 1px solid blue; */
+            width: 590px;
+            height: 390px;
+            margin: 0 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+
+        }
+        .leftbox{
+            /* border: 1px solid orange; */
+            background-color: black;
+            width: 220px;
+            height: 390px;
+        }
+        .rightbox{
+            /* border: 1px solid orange; */
+            background-color: black;
+            width: 242px;
+            height: 390px;
+        }
+        .monster{
+            background-image: url(/Game/epic/dragon.jpg);
+            background-size: cover;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            position: absolute;
+            left: 430px;
+            top: 0;
+            /* border: 1px solid orange; */
+        }
+        .arch{
+            background-image: url(/Game/epic/agmd.png);
+            background-size: cover;
+            width: 102px;
+            height: 110px;
+        }
+        .monster img{
+            width: 100%;
+            height: 100%;
+        }
+        .num{
+            width: 35px;
+            height: 35px;
+            background-color: rgba(172, 147, 2, 0.918);
+            border-radius: 50%;
+            border: none;
+            margin: 15px 10px;
+        }
+        .kv{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .text{
+            background-image: url(/Game/epic/book.jpg);
+            background-repeat: round;
+            background-size: 80%;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            width: 150px;
+            height: 80px;
+            opacity: 70%;
+        }
+        .magic{
+            width: 150px;
+            height: 150px;
+            background-image: url(/Game/epic/magic.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            opacity: 55%;
+        }
+        input{
+            width: 40px;
+            margin-left: 54px;
+            margin-top: 54px;
+            font-size: 34px;
+            border: none;
+        }
+       
+        .diss{
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+        .talk{
+            width: 140px;
+            height: 95px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px;
+            border: 2px solid rgb(153, 164, 55);
+        }
+        .attack{
+            background-image: url(/Game/epic/attack.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-size: 100%;
+            width: 130px;
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 55px;
+        }
+        .check{
+            margin-bottom: 40px;
+            color: red;
+            font-size: 20px;
+        }
+        .list button{
+            width: 100px;
+            height: 30px;
+            margin: 5px 75px;
+        }
+        .spanx{
+            width: 130px;
+            height: 50px;
+            font-size: 20px;
+            color: white;
+        }
+        .exception{
+            color: red;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="world">
+            <div class="leftbox">
+                <div class="icon"></div>
+                <div class="info">
+                    <div class="hero">
+                        <div></div>
+                        <p></p>
+                        <div></div>
+                    </div>
+                    <div class="blood"></div>
+                    <div class="map"></div>
+                    <div class="mountain"></div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="kv">
+                    <div class="monster"></div>
+                    <div class="text"><span class="zoom">0~100</span></div>
+                    <div class="magic"><input type="text"></div>
+                </div>
+                <div class="rock">
+                    <button class="num" value="1">I</button>
+                    <button class="num" value="2">II</button>
+                    <button class="num" value="3">III</button>
+                    <button class="num" value="4">IV</button>
+                    <button class="num" value="5">V</button>
+                    <button class="num" value="6">VI</button>
+                    <button class="num" value="7">VII</button>
+                    <button class="num" value="8">VIII</button>
+                    <button class="num" value="9">IX</button>
+                    <button class="num" value="0">X</button>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="diss">
+                    <div class="talk">
+                        <span class="spanx"></span>
+                        <p class="exception"></p>
+                    </div>
+                    <div class="arch"></div>
+                </div>
+                <div class="attack">
+                    <button class="check">ATTACK</button>
+                </div>
+                <div class="list">
+                    <div>
+                        <button class="clear">Clear</button>
+                    </div>
+                    <div>
+                        <button class="show">Surrender</button>
+                    </div>
+                    <div>
+                        <button class="reset">reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let max = 100
+        let min = 1
+        let diss=`你好爛喔~~~答案是:`
+        let GuessNum = document.querySelector('input')        //抓到猜的數字
+        let Numbtn = document.querySelectorAll('.num')        //抓到數字按鍵
+        let Check = document.querySelector('.check')
+        let Span = document.querySelector('.spanx')
+        let Zoom = document.querySelector('.zoom')
+        let Clear = document.querySelector('.clear')
+        let Answer = document.querySelector('.show')
+        let Reset = document.querySelector('.reset')
+        let Exception = document.querySelector('.exception')                  //警告
+        let Limit = document.querySelector('.limit')
+    
+    //----------------------------------------------------
+        function getNum(){
+            return Math.floor(Math.random()*99+1)
+        }
+        let answer = getNum()
+    //----------------------------------------------------
+    
+        Numbtn.forEach(element => {element.addEventListener('click', function(){GuessNum.value += element.value})})
+        //監聽0-9的每個按鍵並顯示於input上
+        
+        Clear.addEventListener('click', function(){GuessNum.value = ''}) 
+        //清除input裡輸入的東西
+    
+        Answer.addEventListener('click', function(){Span.innerText = diss+answer})
+        //把答案的值放入span裡面
+     
+        Reset.addEventListener('click', function(){ 
+            min = 1
+            max = 100
+            Zoom.innerText =`${min}~${max}`
+            answer = getNum()
+            Exception.innerHTML = ` `
+            Span.innerText = ` `
+            GuessNum.value = ''
+        })
+        //遊戲reset
+        
+        
+        Check.addEventListener('click', function(){
+            let Guess = GuessNum.value
+            let Guessint = parseInt(Guess, 10)     //(要轉的字串,十進位)
+            if(Guessint >= max || Guessint <= min){
+                Exception.innerHTML =`超出範圍了混蛋!`
+            }
+            else if(Guessint == answer){
+                alert(`過關啦`)
+            }
+            else if(Guessint > answer){
+                max = Guessint
+                Exception.innerHTML = ` `
+            }
+            else if(Guessint < answer){
+                min = Guessint
+                Exception.innerHTML = ` `
+            }
+            Zoom.innerText =`${min}~${max}`      //更新範圍
+            GuessNum.value = ''                  //清空原本輸入的數值
+        })
+        
+        
+    
+        
+        </script>
+</body>
+</html>
