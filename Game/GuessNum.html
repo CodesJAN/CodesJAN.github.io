@@ -128,7 +128,7 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 5px;
-            border: 2px solid rgb(153, 164, 55);
+            border-bottom: 2px solid rgb(107, 109, 81);
         }
         .attack{
             background-image: url(/Game/epic/attack.jpg);
@@ -190,6 +190,7 @@
         .hero p{
             width: 100px;
             margin: 5px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -200,8 +201,8 @@
                 <div class="icon"><img src="/Game/epic/hero.jpg" alt=""></div>
                 <div class="info">
                     <div class="hero">
-                        <p class="hp">ID:OLAF</p>
-                        <p>HP:100</p>
+                        <p>ID:OLAF</p>
+                        <p class="hp">HP:100</p>
                     </div>
                     <div class="blood"></div>
                     <div class="map"><img src="/Game/epic/map.jpg" alt=""></div>
@@ -255,6 +256,7 @@
     <script>
         let max = 100
         let min = 1
+        let hp = 100
         let diss=`你好爛喔~~~答案是:`
         let GuessNum = document.querySelector('input')        //抓到猜的數字
         let Numbtn = document.querySelectorAll('.num')        //抓到數字按鍵
@@ -266,7 +268,7 @@
         let Reset = document.querySelector('.reset')
         let Exception = document.querySelector('.exception')                  //警告
         let Limit = document.querySelector('.limit')
-    
+        let HP = document.querySelector('.hp')
     //----------------------------------------------------
         function getNum(){
             return Math.floor(Math.random()*99+1)
@@ -291,6 +293,8 @@
             Exception.innerHTML = ` `
             Span.innerText = ` `
             GuessNum.value = ''
+            hp = 100
+            HP.innerHTML = `HP:${hp}`
         })
         //遊戲reset
         
@@ -303,17 +307,24 @@
             }
             else if(Guessint == answer){
                 alert(`過關啦`)
+                hp = hp - 15
+                HP.innerHTML = `HP:${hp}`
             }
             else if(Guessint > answer){
                 max = Guessint
                 Exception.innerHTML = ` `
+                hp = hp - 15
+                HP.innerHTML = `HP:${hp}`
             }
             else if(Guessint < answer){
                 min = Guessint
                 Exception.innerHTML = ` `
+                hp = hp - 15
+                HP.innerHTML = `HP:${hp}`
             }
             Zoom.innerText =`${min}~${max}`      //更新範圍
             GuessNum.value = ''                  //清空原本輸入的數值
+        
         })
         
         
