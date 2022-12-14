@@ -44,13 +44,13 @@
             /* border: 1px solid orange; */
             background-color: black;
             width: 220px;
-            height: 390px;
+            height: 397px;
         }
         .rightbox{
             /* border: 1px solid orange; */
             background-color: black;
             width: 242px;
-            height: 390px;
+            height: 397px;
         }
         .monster{
             background-image: url(/Game/epic/dragon.jpg);
@@ -162,23 +162,49 @@
             color: red;
             font-size: 16px;
         }
-
+        .icon{
+            width: 220px;
+            display: flex;
+            position: absolute;
+            top:77px;
+        }
+        .icon img{
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+        }
+        .map{
+           width: 220px;
+           margin-top: 18px;
+        }
+        .map img{
+            width: 100%;
+        }
+        .hero{
+            width: 220px;
+            height: 50px;
+            margin-top: 130px;
+            margin-left: 20px;
+            color: rgba(255, 255, 255, 0.628);
+        }
+        .hero p{
+            width: 100px;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
     <section>
         <div class="world">
             <div class="leftbox">
-                <div class="icon"></div>
+                <div class="icon"><img src="/Game/epic/hero.jpg" alt=""></div>
                 <div class="info">
                     <div class="hero">
-                        <div></div>
-                        <p></p>
-                        <div></div>
+                        <p class="hp">ID:OLAF</p>
+                        <p>HP:100</p>
                     </div>
                     <div class="blood"></div>
-                    <div class="map"></div>
-                    <div class="mountain"></div>
+                    <div class="map"><img src="/Game/epic/map.jpg" alt=""></div>
                 </div>
             </div>
             <div class="main">
