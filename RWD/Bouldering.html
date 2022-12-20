@@ -12,38 +12,47 @@
             padding: 0;
             line-height: 1;
         }
+
         a {
             font-weight: 700;
             text-decoration: none;
             /*不要底線*/
         }
-        a:link{
-            color:rgba(219, 46, 109, 0.676)
+
+        a:link {
+            color: rgba(219, 46, 109, 0.676)
         }
-        a:visited{
-            color:rgba(219, 46, 109, 0.676)
+
+        a:visited {
+            color: rgba(219, 46, 109, 0.676)
         }
-        a:hover{
-            color:rgba(243, 74, 136, 0.676)
+
+        a:hover {
+            color: rgba(243, 74, 136, 0.676)
         }
+
         li {
             list-style: none;
             /*不要點點*/
         }
-        body{
+
+        body {
             background-color: rgb(195, 225, 225);
         }
+
         .main-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 10px;
-            background-color: rgb(220, 136, 108);  
-            position: relative;  
+            background-color: rgb(220, 136, 108);
+            position: relative;
         }
+
         .main-menu {
             display: flex;
         }
+
         .logo img {
             vertical-align: middle;
             width: 70px;
@@ -52,7 +61,8 @@
             padding: 2px 0;
             margin-left: 10px;
         }
-        input{
+
+        input {
             display: none;
         }
 
@@ -60,131 +70,175 @@
             .HB {
                 width: 40px;
                 height: 40px;
-                background-color:rgb(118, 112, 112);
+                background-color: rgb(118, 112, 112);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
             }
+
             .HB span {
                 width: 80%;
                 height: 2px;
                 background-color: #fff;
             }
-            #menu-control:checked ~ .main-header .HB span:first-child{
+
+            #menu-control:checked~.main-header .HB span:first-child {
                 transform: translateY(11px) rotate(45deg);
                 transition: 1s;
             }
-            #menu-control:checked ~ .main-header .HB span:nth-child(2){
+
+            #menu-control:checked~.main-header .HB span:nth-child(2) {
                 background-color: rgb(118, 112, 112)
             }
-            #menu-control:checked ~ .main-header .HB span:nth-child(3){
+
+            #menu-control:checked~.main-header .HB span:nth-child(3) {
                 transform: translateY(-10px) rotate(-45deg);
                 transition: 1s;
             }
-            nav{
+
+            nav {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
             }
-            #menu-control:checked ~ .main-header nav{
+
+            #menu-control:checked~.main-header nav {
                 display: block;
             }
-            .main-menu{
+
+            .main-menu {
                 display: flex;
                 flex-direction: column;
             }
-            .main-menu .item{
+
+            .main-menu .item {
                 font-size: 30px;
                 padding: 15px 5px;
                 background-color: burlywood;
             }
-            .item-list{
+
+            .item-list {
                 background-color: rgb(223, 180, 190);
                 display: none;
+                margin-top: 20px;
             }
-            .detail, .details{
+
+            .detail,
+            .details {
                 background-color: rgb(187, 190, 181);
                 display: none;
+                /* position: absolute; */
             }
-            .item-list li{
+
+            .item-list li {
                 padding: 15px 0;
             }
-            .detail li, .details li{
+
+            .detail li,
+            .details li {
                 padding: 10px 0;
             }
-            .detail a, .details a{
+
+            .detail a,
+            .details a {
                 color: rgb(190, 70, 80);
                 font-size: 25px;
             }
-            .item:hover .item-list {
+
+            #equip-control:checked~.item #list1 {
                 display: block;
             }
-            .item-list li:hover .detail {
+            #location-control:checked~.item #list2 {
                 display: block;
-            } 
-            .item-list li:hover .details {
+            }
+            #bag-control:checked~.detail {
                 display: block;
-            } 
-            .item-list li + li{
+            }
+            #shose-control:checked~.details {
+                display: block;
+            }
+
+            /*-----------------------------------------------------------------------*/
+            .item-list li+li {
                 border-top: 2px solid rgba(170, 130, 130, 0.539);
             }
             
-            
+            .equip, .location{
+                margin-left: 400px;
+            }
+            .shose{
+                margin-left: 429px ;
+            }
+            .bag{
+                margin-left: 457px;
+            }
         }
-       
+
 
         @media screen and (width >=768px) {
             .HB {
                 display: none;
             }
+
             .item:hover .item-list {
                 display: block;
             }
+
             .item-list li:hover .detail {
                 display: block;
             }
+
             .item-list li:hover .details {
                 display: block;
             }
+
             .item {
                 font-size: 25px;
                 margin: 0 20px;
                 padding: 25px 10px;
-                background-color:rgb(220, 136, 108);
+                background-color: rgb(220, 136, 108);
             }
+
             .item-list {
                 position: absolute;
                 top: 100%;
                 display: none;
             }
+
             .item-list li {
                 background-color: rgb(219, 194, 198);
                 opacity: 0.9;
                 padding: 15px;
             }
+
             .detail {
                 position: absolute;
                 top: 0;
                 left: 105px;
                 display: none;
             }
-            .details{
+
+            .details {
                 position: absolute;
                 top: 55px;
                 left: 105px;
                 display: none;
             }
-            .detail li, .details li {
+
+            .detail li,
+            .details li {
                 background-color: rgb(187, 190, 181);
                 padding: 15px;
             }
-            .item-list li + li{
+
+            .item-list li+li {
                 border-top: 2px solid rgba(170, 130, 130, 0.539);
             }
-            label{
+
+            label {
                 display: none;
             }
         }
@@ -201,12 +255,14 @@
         </div>
         <nav>
             <ul class="main-menu">
+                <input type="checkbox" id="equip-control">
                 <li class="item"><a href="#">認識抱石</a></li>
                 <li class="item">
-                    <a href="#">裝備補給</a>
-                    <ul class="item-list">
+                    <a href="#">裝備補給</a><label for="equip-control" class="equip"><span class="es">></span></label>
+                    <ul class="item-list" id="list1">
                         <li>
-                            <a href="#">粉袋</a>
+                            <input type="checkbox" id="bag-control">
+                            <a href="#">粉袋</a><label for="bag-control" class="bag"><span>></span></label>
                             <ul class="detail">
                                 <li><a href="#">Mammut</a></li>
                                 <li><a href="#">BlackDiamond</a></li>
@@ -214,7 +270,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">抱石鞋</a>
+                            <input type="checkbox" id="shose-control">
+                            <a href="#">抱石鞋</a><label for="shose-control" class="shose"><span>></span></label>
                             <ul class="details">
                                 <li><a href="#">LaSportiva</a></li>
                                 <li><a href="#">Evolv</a></li>
@@ -226,9 +283,10 @@
                     </ul>
                 </li>
                 <li class="item"><a href="#">預約體驗</a></li>
+                <input type="checkbox" id="location-control">
                 <li class="item">
-                    <a href="#">分店資訊</a>
-                    <ul class="item-list">
+                    <a href="#">分店資訊</a><label for="location-control" class="location"><span>></span></label>
+                    <ul class="item-list" id="list2">
                         <li><a href="#">南港館</a></li>
                         <li><a href="#">萬華店</a></li>
                         <li><a href="#">中和店</a></li>
