@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+        }
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            /*不要底線*/
+        }
+        a:link{
+            color:rgba(219, 46, 109, 0.676)
+        }
+        a:visited{
+            color:rgba(219, 46, 109, 0.676)
+        }
+        a:hover{
+            color:rgba(252, 93, 151, 0.676)
+        }
+        li {
+            list-style: none;
+            /*不要點點*/
+        }
+        body{
+            background-color: rgb(195, 225, 225);
+        }
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            background-color: rgb(220, 136, 108);  
+            position: relative;  
+        }
+        .main-menu {
+            display: flex;
+        }
+        .logo img {
+            vertical-align: middle;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            padding: 2px 0;
+            margin-left: 10px;
+        }
+        #menu-control {
+            display: none;
+        }
+
+        @media screen and (width < 768px) {
+            .HB {
+                width: 40px;
+                height: 40px;
+                background-color:rgb(118, 112, 112);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .HB span {
+                width: 80%;
+                height: 2px;
+                background-color: #fff;
+            }
+            #menu-control:checked ~ .main-header .HB span:first-child{
+                transform: translateY(11px) rotate(45deg);
+                transition: 1s;
+            }
+            #menu-control:checked ~ .main-header .HB span:nth-child(2){
+                background-color: rgb(118, 112, 112)
+            }
+            #menu-control:checked ~ .main-header .HB span:nth-child(3){
+                transform: translateY(-10px) rotate(-45deg);
+                transition: 1s;
+            }
+            nav{
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+            }
+            #menu-control:checked ~ .main-header nav{
+                display: block;
+            }
+            .main-menu{
+                display: flex;
+                flex-direction: column;
+            }
+            .main-menu .item{
+                font-size: 30px;
+                padding: 15px 5px;
+                background-color: burlywood;
+            }
+            .item-list{
+                background-color: rgb(223, 180, 190);
+                display: none;
+            }
+            .detail, .details{
+                background-color: rgb(187, 190, 181);
+                display: none;
+            }
+            .item-list li{
+                padding: 15px 0;
+            }
+            .detail li, .details li{
+                padding: 10px 0;
+            }
+            .detail a, .details a{
+                color: rgb(190, 70, 80);
+                font-size: 25px;
+            }
+            .item:hover .item-list {
+                display: block;
+            }
+            .item-list li:hover .detail {
+                display: block;
+            } 
+            .item-list li:hover .details {
+                display: block;
+            } 
+            .item-list li + li{
+                border-top: 2px solid rgba(170, 130, 130, 0.539);
+            }
+        }
+       
+
+        @media screen and (width >=768px) {
+            .HB {
+                display: none;
+            }
+            .item:hover .item-list {
+                display: block;
+            }
+            .item-list li:hover .detail {
+                display: block;
+            }
+            .item-list li:hover .details {
+                display: block;
+            }
+            .item {
+                font-size: 25px;
+                margin: 0 20px;
+                padding: 25px 10px;
+                background-color:rgb(233, 167, 127);
+            }
+            .item-list {
+                position: absolute;
+                top: 94%;
+                display: none;
+            }
+            .item-list li {
+                background-color: rgb(219, 194, 198);
+                opacity: 0.9;
+                padding: 15px;
+            }
+            .detail {
+                position: absolute;
+                top: 0;
+                left: 105px;
+                display: none;
+            }
+            .details{
+                position: absolute;
+                top: 55px;
+                left: 105px;
+                display: none;
+            }
+            .detail li, .details li {
+                background-color: rgb(187, 190, 181);
+                padding: 15px;
+            }
+            .item-list li + li{
+                border-top: 2px solid rgba(170, 130, 130, 0.539);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="menu-control">
+    <header class="main-header">
+        <div class="logo">
+            <h1>
+                <a href="#"><img src="/RWD/bd-image/climb.jpg"></a>
+            </h1>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li class="item"><a href="#">認識抱石</a></li>
+                <li class="item">
+                    <a href="#">裝備補給</a>
+                    <ul class="item-list">
+                        <li>
+                            <a href="#">粉袋</a>
+                            <ul class="detail">
+                                <li><a href="#">Mammut</a></li>
+                                <li><a href="#">BlackDiamond</a></li>
+                                <li><a href="#">HANCHOR</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">抱石鞋</a>
+                            <ul class="details">
+                                <li><a href="#">LaSportiva</a></li>
+                                <li><a href="#">Evolv</a></li>
+                                <li><a href="#">Five Ten</a></li>
+                                <li><a href="#">TENAYA</a></li>
+                                <li><a href="#">Madrock </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item"><a href="#">預約體驗</a></li>
+                <li class="item">
+                    <a href="#">分店資訊</a>
+                    <ul class="item-list">
+                        <li><a href="#">南港館</a></li>
+                        <li><a href="#">萬華店</a></li>
+                        <li><a href="#">中和店</a></li>
+                        <li><a href="#">新莊店</a></li>
+                        <li><a href="#">桃園店</a></li>
+                    </ul>
+                </li>
+                <li class="item"><a href="#">雲端抱石</a></li>
+            </ul>
+        </nav>
+        <label for="menu-control" class="HB">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>
+</body>
+
+</html>
