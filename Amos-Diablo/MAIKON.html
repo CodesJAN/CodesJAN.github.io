@@ -28,34 +28,35 @@
             display: flex;
             align-items: center;
             padding: 15px;
-            position:relative;
+            position: relative;
             width: auto;
             background-color: #fff;
         }
 
         .header-nav {
+            display: none;
+        }
+
+        .first {
+            margin-top: 80px;
+            border-bottom: 1px solid black;
+        }
+
+        #menu-control:checked~.header-container .header-nav {
             display: flex;
             flex-direction: column;
             background-color: #fff;
             position: absolute;
             z-index: 2;
-            top: 0;
-            left:1200px;
             box-shadow: 0px 8px 32px 0px rgb(93 102 120);
             width: 75%;
-        }
-        .first{
-            margin-top: 80px;
-            border-bottom: 1px solid black;
-        }
-        
-        #menu-control:checked ~ .header-container .header-nav{
-            left:500px;
+            top: 0;
+            right: 0;
         }
 
 
         .header-nav a {
-            font-size: 16px;
+            font-size: 20px;
             padding: 6px 10px;
         }
 
@@ -94,8 +95,7 @@
         .four,
         .six,
         .eight,
-        .ten
-        {
+        .ten {
             padding: 15px;
         }
 
@@ -114,8 +114,7 @@
         .seven h2,
         .eight h2,
         .nine h2,
-        .ten h2 
-        {
+        .ten h2 {
             font-size: 35px;
             color: #1D273B;
             opacity: 0.8;
@@ -200,7 +199,7 @@
         }
 
         .three-item a {
-            font: 14px sans-serif;
+            font: 16px;
             font-weight: 700;
         }
 
@@ -279,6 +278,7 @@
             background-color: #f9fbff;
             padding: 30px 15px;
         }
+
         .seven-pic {
             margin: 40px 0;
             box-sizing: border-box;
@@ -311,7 +311,9 @@
             box-shadow: 0px 4px 44px 0px rgb(235, 232, 232);
             padding: 30px;
         }
-        .eight input, .eight textarea{
+
+        .eight input,
+        .eight textarea {
             box-sizing: border-box;
             font-size: 16px;
             width: 100%;
@@ -319,20 +321,24 @@
             margin: 10px 0;
             opacity: 50%;
         }
-        .nine{
+
+        .nine {
             background-color: #f9fbff;
             padding: 55px;
         }
-        .nine-title{
+
+        .nine-title {
             display: flex;
             justify-content: center;
         }
-        .nine-content{
+
+        .nine-content {
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
-        .nine input{
+
+        .nine input {
             box-sizing: border-box;
             font-size: 16px;
             width: 100%;
@@ -340,35 +346,279 @@
             margin: 10px 0;
             opacity: 50%;
         }
-        .ten p, .ten a{
+
+        .ten p,
+        .ten a {
             font-size: 18px;
             line-height: 25px;
             color: #515763;
             opacity: 0.8;
         }
-        .ser, .ac{
+
+        .ser,
+        .ac {
             display: flex;
             flex-direction: column;
         }
-        .ser a, .ac a{
+
+        .ser a,
+        .ac a {
             margin: 10px 0;
         }
-        .ten-pic{
+
+        .ten-pic {
             margin: 30px 0;
         }
-        .ten-pic img{
+
+        .ten-pic img {
             width: 30%;
         }
-        .last{
+
+        .last {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
+        .last a {
+            margin: 20px;
+        }
+
+        .last p {
+            margin-bottom: 20px;
+        }
+
+        .ten span {
+            color: #1FDE82;
+        }
+
+
         /*--------------------------------------------------------------------------*/
-        @media screen and (width >=768px){
-         
+        @media screen and (width >=768px) {
+            .header-nav {
+                display: flex;
+                align-items: center;
+                margin-left: 30%;
+            }
 
+            .first {
+                margin-top: 0;
+            }
 
+            .HB {
+                display: none;
+            }
+
+            #sub {
+                display: block;
+                border: 1px solid rgb(192, 190, 190);
+                padding: 12px 20px;
+                border-radius: 4px;
+            }
+
+            .one h2,
+            .two h2,
+            .three h2,
+            .four h2,
+            .six h2,
+            .seven h2,
+            .eight h2,
+            .nine h2 {
+                font-size: 40px;
+                color: #1D273B;
+                opacity: 0.8;
+                margin: 40px 0;
+            }
+
+            .five h2 {
+                font-size: 40px;
+            }
+
+            .one {
+                display: flex;
+                margin-top: 40px;
+            }
+
+            .one-text,
+            .four-text {
+                width: 50%;
+                margin-right: 15px;
+            }
+
+            .one-pic,
+            .four-pic {
+                width: 50%;
+                margin-top: 0;
+                margin-left: 15px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .one-pic img,
+            .two-pic img,
+            .four-pic img {
+                width: 90%;
+                vertical-align: middle;
+            }
+
+            .one-play {
+                margin-right: 70px;
+            }
+
+            .two,
+            .four {
+                display: flex;
+            }
+
+            .two-text {
+                width: 50%;
+                margin-left: 15px;
+            }
+
+            .two-pic {
+                width: 50%;
+                margin-right: 15px;
+                margin-top: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .two-btn {
+                margin-left: 20%;
+            }
+
+            .three .row {
+                display: flex;
+            }
+
+            .three-item {
+                width: 32%;
+                margin: 1.5%;
+            }
+
+            .read {
+                margin-bottom: 70px;
+            }
+
+            .five {
+                display: flex;
+            }
+
+            .five .row {
+                display: flex;
+            }
+
+            .five-item {
+                width: 100%;
+                margin: 20px;
+                box-sizing: border-box;
+                padding: 30px 20px;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            .five-square {
+                width: 55%;
+            }
+
+            .five-content {
+                width: 45%;
+                padding: 60px;
+            }
+
+            .five-content p {
+                font-size: 19px;
+                margin: 15px 0;
+            }
+
+            .six-item {
+                display: flex;
+            }
+
+            .six-item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .six-pic {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+
+            .six-pic img {
+                width: 100%;
+                height: 80%;
+            }
+
+            .six-content {
+                display: flex;
+                align-items: center;
+                width: 70%;
+                margin: 0;
+            }
+
+            .six-num {
+                margin-right: 50px;
+            }
+
+            .seven .row {
+                display: flex;
+            }
+
+            .seven-pic {
+                width: 32%;
+                margin: 1.5%;
+            }
+
+            .seven-pic img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .eight {
+                display: flex;
+            }
+
+            .eight-pic {
+                width: 49%;
+                margin: 1%;
+            }
+
+            .eight-keyin {
+                width: 49%;
+                margin: 1%;
+            }
+
+            .nine-content {
+                display: flex;
+                justify-content: center;
+            }
+
+            .ten h2 {
+                font-size: 30px;
+            }
+
+            .ten-part1,
+            .ten-part2 {
+                display: flex;
+            }
+
+            .ten-right {
+                margin-left: 35%;
+            }
+
+            .ten-pic img {
+                width: 200px;
+            }
+
+            .ten-logo {
+                margin: 70px 0 30px 0;
+            }
+
+            .last {
+                margin-top: 50px;
+            }
         }
     </style>
 </head>
@@ -405,7 +655,7 @@
     <main>
         <section>
             <div class="one">
-                <div>
+                <div class="one-text">
                     <h2>Our creativity is your success</h2>
                     <p>We break all boundaries if they happen on our way of project’s development!</p>
                     <div class="one-ps">
@@ -422,20 +672,20 @@
         </section>
         <section>
             <div class="two">
-                <div>
-                    <div class="two-pic"><img
-                            src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-2.png"
-                            alt=""></div>
-                    <div>
-                        <h2>Creative challenges are our passion</h2>
-                        <p>Our team of designers and developers work closely together to build a creative and positive
-                            working environment. Functionality is as important to us as aesthetics.</p>
-                        <div class="two-ps">
-                            <div class="one-btn"><a href="">ABOUT US</a></div>
-                            <div class="two-btn"><a href="">CONTACT US</a></div>
-                        </div>
+
+                <div class="two-pic"><img
+                        src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-2.png"
+                        alt=""></div>
+                <div class="two-text">
+                    <h2>Creative challenges are our passion</h2>
+                    <p>Our team of designers and developers work closely together to build a creative and positive
+                        working environment. Functionality is as important to us as aesthetics.</p>
+                    <div class="two-ps">
+                        <div class="one-btn"><a href="">ABOUT US</a></div>
+                        <div class="two-btn"><a href="">CONTACT US</a></div>
                     </div>
                 </div>
+
             </div>
         </section>
         <section>
@@ -452,7 +702,7 @@
                             <h3>Web design & Brending</h3>
                             <p>A great brand combines design and conveys company’s value messaging to evoke emotion and
                                 drive strategy.</p>
-                            <div><a href="">READ MORE</a></div>
+                            <div class="read"><a href="">READ MORE</a></div>
                         </div>
                         <div class="three-item">
                             <div><img
@@ -461,7 +711,7 @@
                             <h3>Graphic Design</h3>
                             <p>Rich experience plus unlimited imagination create our successful service discovered by
                                 clients.</p>
-                            <div><a href="">READ MORE</a></div>
+                            <div class="read"><a href="">READ MORE</a></div>
                         </div>
                         <div class="three-item">
                             <div><img
@@ -470,7 +720,7 @@
                             <h3>Video Production</h3>
                             <p>Creating and handling professional video is our strong point. It plays major role in your
                                 digital business strategy.</p>
-                            <div><a href="">READ MORE</a></div>
+                            <div class="read"><a href="">READ MORE</a></div>
                         </div>
                     </div>
                     <div class="row">
@@ -481,7 +731,7 @@
                             <h3>SEO</h3>
                             <p>We provide everything your site needs to perform at it’s highest capabilities on the
                                 major search engines.</p>
-                            <div><a href="">READ MORE</a></div>
+                            <div class="read"><a href="">READ MORE</a></div>
                         </div>
                         <div class="three-item">
                             <div><img
@@ -490,7 +740,7 @@
                             <h3>Digital Marketing</h3>
                             <p>We do collateral design, interactive design, hoarding, signage, presentation centres, and
                                 more.</p>
-                            <div><a href="">READ MORE</a></div>
+                            <div class="read"><a href="">READ MORE</a></div>
                         </div>
                         <div class="three-item">
                             <div><img
@@ -499,7 +749,7 @@
                             <h3>Infographics</h3>
                             <p>Turn your data into captivating artwork that will keep your audience engaged. Our team
                                 can help you with it.</p>
-                            <div><a href="">READ MORE</a></div>
+                            <div class="read"><a href="">READ MORE</a></div>
                         </div>
                     </div>
                 </div>
@@ -507,7 +757,7 @@
         </section>
         <section>
             <div class="four">
-                <div>
+                <div class="four-text">
                     <h2>If you have any questions, please contact us</h2>
                     <p>Our professional support team try to do their best to provide you with high-quality consultations
                         concerning any question about our services.</p>
@@ -523,7 +773,7 @@
         </section>
         <section>
             <div class="five">
-                <div>
+                <div class="five-square">
                     <div class="row">
                         <div class="five-item">
                             <p class="five-num">1880+</p>
@@ -544,79 +794,92 @@
                             <p class="five-text">Our values are good organization and result orientation.</p>
                         </div>
                     </div>
-                    <div class="five-content">
-                        <h2>Why choose our studio for your projects?</h2>
-                        <p>We are a command of professional and enthusiastic people, who like what they do and are
-                            always in
-                            the process of growing and improving their skills.</p>
-                        <div class="five-btn"><a href="">ORDER SERVICE</a></div>
-                    </div>
                 </div>
+                <div class="five-content">
+                    <h2>Why choose our studio for your projects?</h2>
+                    <p>We are a command of professional and enthusiastic people, who like what they do and are
+                        always in
+                        the process of growing and improving their skills.</p>
+                    <div class="five-btn"><a href="">ORDER SERVICE</a></div>
+                </div>
+            </div>
         </section>
         <section>
             <div class="six">
                 <div>
                     <h2>Steps of our work</h2>
                 </div>
-                <div>
-                    <div class="six-num"><img
-                            src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-01.svg"
-                            alt=""></div>
-                    <div>
-                        <h3>Meeting With The Customer</h3>
-                        <p>The first meeting is very import to form contact and discuss the main ideas of the project.
-                        </p>
+                <div class="six-item">
+                    <div class="six-content">
+                        <div class="six-num"><img
+                                src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-01.svg"
+                                alt=""></div>
+                        <div class="six-text">
+                            <h3>Meeting With The Customer</h3>
+                            <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                project.
+                            </p>
+                        </div>
                     </div>
                     <div class="six-pic"><img
                             src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-4.svg"
                             alt=""></div>
                 </div>
-                <div>
-                    <div class="six-num"><img
-                            src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-02.svg"
-                            alt=""></div>
-                    <div>
-                        <h3>We Consider And Analyze The Work Plan</h3>
-                        <p>When we understand the main eideas, we proceed to discussing the work plan and analyzing it.
-                        </p>
+                <div class="six-item">
+                    <div class="six-content">
+                        <div class="six-num"><img
+                                src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-02.svg"
+                                alt=""></div>
+                        <div class="six-text">
+                            <h3>We Consider And Analyze The Work Plan</h3>
+                            <p>When we understand the main eideas, we proceed to discussing the work plan and analyzing
+                                it.
+                            </p>
+                        </div>
                     </div>
                     <div class="six-pic"><img
                             src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-5.svg"
                             alt=""></div>
                 </div>
-                <div>
-                    <div class="six-num"><img
-                            src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-03.svg"
-                            alt=""></div>
-                    <div>
-                        <h3>Work Hard On The Project</h3>
-                        <p>Our professional team start to handle with your project and embody the conception of the
-                            project.</p>
+                <div class="six-item">
+                    <div class="six-content">
+                        <div class="six-num"><img
+                                src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-03.svg"
+                                alt=""></div>
+                        <div class="six-text">
+                            <h3>Work Hard On The Project</h3>
+                            <p>Our professional team start to handle with your project and embody the conception of the
+                                project.</p>
+                        </div>
                     </div>
                     <div class="six-pic"><img
                             src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-6.svg"
                             alt=""></div>
                 </div>
-                <div>
-                    <div class="six-num"><img
-                            src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-04.svg"
-                            alt=""></div>
-                    <div>
-                        <h3>Once Again We Analyze And Check Everything</h3>
-                        <p>We meet, analyze and check the done work and make needed corrections.</p>
+                <div class="six-item">
+                    <div class="six-content">
+                        <div class="six-num"><img
+                                src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-04.svg"
+                                alt=""></div>
+                        <div class="six-text">
+                            <h3>Once Again We Analyze And Check Everything</h3>
+                            <p>We meet, analyze and check the done work and make needed corrections.</p>
+                        </div>
                     </div>
                     <div class="six-pic"><img
                             src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-7.svg"
                             alt=""></div>
                 </div>
-                <div>
-                    <div class="six-num"><img
-                            src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-05.svg"
-                            alt=""></div>
-                    <div>
-                        <h3>We Finish The Work And Give It To The Customer</h3>
-                        <p>The project is ready and we give it to the customer. Also we ask for the feedback from the
-                            customer.</p>
+                <div class="six-item">
+                    <div class="six-content">
+                        <div class="six-num"><img
+                                src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/number-05.svg"
+                                alt=""></div>
+                        <div class="six-text">
+                            <h3>We Finish The Work And Give It To The Customer</h3>
+                            <p>The project is ready and we give it to the customer. Also we ask for the feedback from
+                                thecustomer.</p>
+                        </div>
                     </div>
                     <div class="six-pic"><img
                             src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-8.svg"
@@ -627,10 +890,12 @@
         <section>
             <div class="seven">
                 <div>
-                    <h2>Our team's work with Projects</h2>
-                </div>
-                <div class="one-btn">
-                    <a href="">ALL PROJECTS</a>
+                    <div>
+                        <h2>Our team's work with Projects</h2>
+                    </div>
+                    <div class="one-btn">
+                        <a href="">ALL PROJECTS</a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="seven-pic"><img
@@ -662,7 +927,7 @@
         </section>
         <section>
             <div class="eight">
-                <div><img
+                <div class="eight-pic"><img
                         src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/home-image-9.svg"
                         alt=""></div>
                 <div class="eight-keyin">
@@ -693,42 +958,52 @@
         <div class="ten">
             <div>
                 <div>
-                    <div><img src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/logo.png" alt=""></div>
-                    <div>
-                        <p>Phone:+ 1 (045) - 224 - 12 - 67</p>
-                        <p>Mail:info@demolink.org</p>
-                    </div>
-                    <div>
-                        <h2>Services</h2>
-                        <div class="ser">
-                            <a href="">Web design & brending</a>
-                            <a href="">Web development</a>
-                            <a href="">Full Optimization</a>
-                            <a href="">Research & Strategy</a>
-                            <a href="">Management & Marketing</a>
-                            <a href="">Free support</a>
+                    <div class="ten-part1">
+                        <div>
+                            <div class="ten-logo"><img
+                                    src="https://ld-wp73.template-help.com/monstroid2/skins/maikon/wp-content/uploads/2018/11/logo.png"
+                                    alt=""></div>
+                            <div>
+                                <p><span>Phone:</span> + 1 (045) - 224 - 12 - 67</p>
+                                <p><span>Mail:</span> info@demolink.org</p>
+                            </div>
+                        </div>
+                        <div class="ten-right">
+                            <h2>Services</h2>
+                            <div class="ser">
+                                <a href="">Web design & brending</a>
+                                <a href="">Web development</a>
+                                <a href="">Full Optimization</a>
+                                <a href="">Research & Strategy</a>
+                                <a href="">Management & Marketing</a>
+                                <a href="">Free support</a>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <h2>About Company</h2>
-                        <div class="ac">
-                            <a href="">About us</a>
-                            <a href="">Team</a>
-                            <a href="">Case studio</a>
-                            <a href="">Contacts</a>
+                    <div class="ten-part2">
+                        <div>
+                            <h2>About Company</h2>
+                            <div class="ac">
+                                <a href="">About us</a>
+                                <a href="">Team</a>
+                                <a href="">Case studio</a>
+                                <a href="">Contacts</a>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <h2>Our Social Networks</h2>
-                        <p>Join us in the social networks and keep up on the latest news.</p>
-                    </div>
-                    <div class="ten-pic">
-                        <img src="/Amos-Diablo/Mpic/ig.png" alt="">
+                        <div class="ten-right">
+                            <div>
+                                <h2>Our Social Networks</h2>
+                                <p>Join us in the social networks and keep up on the latest news.</p>
+                            </div>
+                            <div class="ten-pic">
+                                <img src="/Amos-Diablo/Mpic/ig.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="last">
-                <p>Copyright © 2018 Wordpress Maikon. All Rights Reserved. | Theme design by Zemez</p>
+                <p>Copyright © 2018 Wordpress Maikon. All Rights Reserved. | Theme design by <span>Zemez</span></p>
                 <div>
                     <a href="">Privacy & Policy</a>
                     <a href="">FAQ</a>
