@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .check {
+            width: 300px;
+            height: 300px;
+            background-color:lightsteelblue;
+            padding: 5px;
+        }
+        .red{
+            background-color: red;
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <!-- 功能區 -->
+            <div>
+                <button class="start">開始</button>
+                <button class="reset">放棄重來</button>
+                <button class="show">看答案</button>
+            </div>
+
+
+
+            <div class="check"></div>
+            <div>
+                <span>輸入</span>
+                <input type="text" placeholder="請輸入4位不重覆數字" class="input">
+
+                <button class="guess">猜!</button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+        let Start = document.querySelector('.start');
+        let Reset = document.querySelector('.reset');
+        let Show = document.querySelector('.show');
+        let Guess = document.querySelector('.guess');
+        let Input = document.querySelector('.input');
+        let Check = document.querySelector('.check');
+
+
+
+        // 產生四位數不重複數字
+        let getNum = function getRandomInt() {
+            let str = '';
+            let arr = [];
+            for (i = 0; i < 4; i++) {
+                str = Math.floor(Math.random() * 10);
+                for (j = 0; j < arr.length; j++) {
+                    if (arr[j] == str) {
+                        arr.splice(j, 1);
+                        i--;
+                    }
+                }
+                arr.push(str);
+            }
+            return `${arr[0]}${arr[1]}${arr[2]}${arr[3]}`
+        }
+
+
+        let Answer;
+        //STRAT
+        Start.addEventListener('click', function () {
+            Answer = getNum()
+        })
+        //RESET
+        Reset.addEventListener('click', function () {
+            Answer = getNum()
+        })
+        //SHOW-Answer
+        Show.addEventListener('click', function () {
+            alert(Answer)
+        })
+
+        //CHECK
+        Guess.addEventListener('click', function () {
+            let clue = document.createElement('div');
+            let AnswerArr = Array.from(Answer)
+            let GuessNum = Input.value;
+            let GuessArr = Array.from(GuessNum);
+            let a = 0;
+            let b = 0;
+            let set = new Set(GuessNum);
+            let checkRepeat = set.size;
+
+            if (AnswerArr === GuessArr) {
+                clue.innerHTML = `<span class="red">4A0B</span> ${GuessNum}`
+                Input.value = ""
+                Check.append(clue)
+            }
+            else if (GuessArr.length != 4 || checkRepeat != 4) {
+                alert('請輸入四位數')
+                Input.value = ""
+            }
+            else if (GuessArr.length == 4) {
+                for (i = 0; i < 4; i++) {
+                    if (AnswerArr[i] == GuessArr[i]) {
+                        a++;
+                    }
+                    else if (AnswerArr.indexOf(GuessArr[i]) >= 0) {
+                        b++;
+                    }
+                }
+                clue.innerHTML = `<span class="red">${a}A${b}B</span> ${GuessNum}`
+                Check.append(clue)
+                Input.value = ""
+            }
+        })
+    </script>
+</body>
+
+</html>
