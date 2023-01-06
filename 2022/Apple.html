@@ -88,67 +88,66 @@
             { rgb: 'rgb(227, 228, 229)', color: "Neptune", pic: '/2022/ApplePic/ipad-silver.jpg', storage: "512GB", price: 48400 },
             { rgb: 'rgb(227, 228, 229)', color: "Neptune", pic: '/2022/ApplePic/ipad-silver.jpg', storage: "1TB", price: 62400 }
         ]
-
         let all = [];
         all.push(I14Arr);
         all.push(I13Arr);
-        all.push(IpadArr);     //將三項產品放進一個陣列
+        all.push(IpadArr);     
         let Iconpic = ["/2022/ApplePic/i14-icon.jpg", "/2022/ApplePic/i13-icon.jpg", "/2022/ApplePic/ipad-icon.jpg"];
-        let dom = document.querySelector('.space'); //綁定要生成空間的div
-        let btn = document.querySelectorAll(".products"); //綁定三個商品的按鈕
+        let dom = document.querySelector('.space'); 
+        let btn = document.querySelectorAll(".products"); 
         btn.forEach((item, index) => {
-            item.addEventListener('click', () => {       //每個按鈕做監聽
+            item.addEventListener('click', () => {      
                 dom.innerHTML = "";
-                let phone = all[index];                    //phone = all[0]
-                let picbox = document.createElement('div');//生成div=>picbox   左邊圖片區
+                let phone = all[index];                    
+                let picbox = document.createElement('div');
                 picbox.classList.add("col-12", "col-md-6", "px-3", "d-flex", "justify-content-center", "align-items-center");
-                let img = document.createElement("img");   //生成img
+                let img = document.createElement("img");   
                 img.classList.add("w-75");
-                img.src = Iconpic[index];                //放入起始圖片路徑
-                picbox.append(img);                        //img加進picbox
-                dom.append(picbox);                        //picbox加進生成空間
+                img.src = Iconpic[index];                
+                picbox.append(img);                        
+                dom.append(picbox);                        
 
-                let largeBox = document.createElement("div"); //div=>largeBox  右邊選項區
+                let largeBox = document.createElement("div"); 
                 largeBox.classList.add("col-12", "col-md-6");
 
-                let colorBox = document.createElement("div");  //生成div=>colorBox
-                colorBox.classList.add("item");                //colorBox加入item class名稱
-                let colorH2 = document.createElement("h2");    //生成h2
-                colorH2.innerText = "Color";                    //塞進文字
+                let colorBox = document.createElement("div");  
+                colorBox.classList.add("item");                
+                let colorH2 = document.createElement("h2");    
+                colorH2.innerText = "Color";                    
                 colorH2.classList.add("fw-bolder");
-                colorBox.append(colorH2);                      //h2放進colorBox
-                let colorData = document.createElement("div"); //生成div=>colorData
+                colorBox.append(colorH2);                      
+                let colorData = document.createElement("div"); 
                 colorData.classList.add("color-box", "row");
                 colorBox.append(colorData);
-                let countArr = [];                             //宣告陣列countArr
-                phone.forEach((thisPhone, ind) => {            //將iphone資料陣列裡的color塞進countArr
+                let countArr = [];                             
+                phone.forEach((thisPhone, ind) => {            
                     countArr.push(thisPhone['color']);
                 });
-                let set1 = new Set(countArr);                  //過濾重複顏色
-                let colorArr = [];                             //宣告陣列colorArr
-                phone.forEach((thisPhone, ind) => {            //將iphone資料陣列裡的rgb塞進colorArr
+                let set1 = new Set(countArr);                  
+                let colorArr = [];                             
+                phone.forEach((thisPhone, ind) => {            
                     colorArr.push(thisPhone['rgb']);
                 });
-                let set21 = new Set(colorArr);                 //過濾重複rgb
-                let set2 = [];                                 //宣告陣列set2
-                set21.forEach(x => {                           //將rgb資料放進陣列set2
+                let set21 = new Set(colorArr);                 
+                let set2 = [];                                 
+                set21.forEach(x => {                           
                     set2.push(x);
                 })
                 let set = [];
                 set1.forEach(x => {
-                    set.push(x);                                 //將顏色資料放進陣列set
+                    set.push(x);                                 
                 })
                 set.forEach((color, ind) => {
-                    let outside = document.createElement("div"); //生成div=> outside 顏色選擇區域
+                    let outside = document.createElement("div");
                     outside.classList.add("box", "col-6", "col-md-4");
-                    let content = document.createElement("div"); //生成div=> content 顏色圈圈外框
+                    let content = document.createElement("div"); 
                     content.classList.add("content", "p-3", "pt-4", "my-3");
-                    let circle = document.createElement("div");  //生成div=> circle  顏色圈圈
+                    let circle = document.createElement("div");  
                     circle.classList.add("circle", "mx-auto");
-                    circle.style.backgroundColor = set2[ind];    //給圈圈上色
+                    circle.style.backgroundColor = set2[ind];    
                     content.append(circle);
-                    let p = document.createElement("div");       //生成div => p
-                    p.innerText = color;                         //給予個顏色名稱
+                    let p = document.createElement("div");       
+                    p.innerText = color;                         
                     p.classList.add("pt-2", "text-center");
                     content.append(p);
                     outside.append(content);
@@ -156,7 +155,7 @@
                 })
 
 
-                let typebox = document.createElement("div"); //容量
+                let typebox = document.createElement("div"); 
                 typebox.classList.add("item");
                 let colorH3 = document.createElement("h2");
                 colorH3.innerText = "Storage";
@@ -169,11 +168,11 @@
                     typeArr.push(thisPhone['storage']);
                 });
                 let set31 = new Set(typeArr);
-                let set3 = [];                               //set3 容量陣列         
+                let set3 = [];                                      
                 set31.forEach(x => {
                     set3.push(x);
                 })
-                let priceArr = [];                          //priceArr 價格陣列
+                let priceArr = [];                          
                 phone.forEach((thisPhone, ind) => {
                     priceArr.push(thisPhone['price']);
                 });
@@ -228,7 +227,6 @@
                         img.src = RGB;
                     })
                 })
-                
             })
         })
 
