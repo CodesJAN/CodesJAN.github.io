@@ -22,7 +22,7 @@
             height: 350px;    
             border: 2px solid rgb(107, 78, 83, 0.6);
             border-radius: 6px;
-            margin-top: 10px;
+            margin: 10px 0;
         }
         .kv img{
             width: 100%;
@@ -36,6 +36,10 @@
             align-items: flex-end;
             color: rgb(168, 174, 92);
             font-weight: bold;
+        }
+        .text{
+            display: flex;
+            align-items: center;
         }
         .change{
             display: flex;
@@ -78,6 +82,9 @@
             background-color: rgb(192, 202, 211);
         }
         
+        p{
+            color: rgb(199, 170, 137);
+        }
         
     </style>
   </head>
@@ -88,8 +95,9 @@
             <img src="" class="flower" alt=""> 
         </div>
         <div class="title">
-            <div>
+            <div class="text">
                 <h1 class="year-month">0000年 - 00月</h1>
+                <p class="poetry">你笑起來很美</p>
             </div>
             <div class="change">
                 <button onclick="previousMonth()" class="btn move"><i class="fa-solid fa-circle-chevron-left"></i></button>
@@ -156,6 +164,9 @@
     <script>
         //宣告
         const monthName = ["January", "Febrary", "March", "April", "May", "June", "July", "Auguest", "September", "October", "November", "December"];
+        const poeArray = ["一屋；兩人；三餐；四季。", "對於世界而言，妳是一個人;<br>但是對於我而言，妳是我的整個世界。", "我是九，你是三，除了妳，還是妳。", "每座城市都會下雨，就像我走到哪裡都會想妳。",
+        "妳，就是這個世界給我的最好的禮物。", "想把關於夏天的句子寫得長一點，<br>想把關於美好的日子過得慢一些。", "妳若安好，便是晴天。", "不是夏日限定，我們來日方長。", "或許秋天是夏天在努力停止的樣子，<br>希望秋天的風把花香帶給你，<br>然後妳再把它寫成溫暖的句子。",
+         "妳別笑，妳一笑我感受不到冬天的氣息了。", "摩天輪還在，糖果店還在，吃果子的熊貓還在。<br>因為有妳，下雪的冬天，年復一年地歸來。", "下雪了，如果我們不撐傘，一直走下去，<br>是不是可以一路到白頭?"]
         const today = new Date() //今天
         let year = today.getFullYear() //年
         let month = today.getMonth() //月份 1月是0
@@ -174,6 +185,7 @@
         const dateArea = document.querySelector('tbody')
 
         const flower = document.querySelector('.flower')
+        const poetry = document.querySelector('.poetry')
 
         const addModal = document.querySelector('#add-modal')
         const editModal = document.querySelector('#edit-modal')
@@ -186,6 +198,7 @@
         //function
         function renderDate() {
             dateArea.innerHTML = ''
+            poetry.innerHTML= ''
 
             yearMonthText.innerText = `${year}年 - ${monthName[month]}`
 
@@ -257,6 +270,7 @@
                 dateArea.appendChild(tr)
             }
             flower.src=flowerArray[month]
+            poetry.innerHTML = `${poeArray[month]}`
         }
 
         function nextMonth() {
