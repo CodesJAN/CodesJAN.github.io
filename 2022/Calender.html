@@ -18,8 +18,8 @@
             background-color: rgb(241, 239, 240);
         }
         .kv{
-            width: 800px;
-            height: 250px;    
+            width: 900px;
+            height: 350px;    
             border: 2px solid rgb(107, 78, 83, 0.6);
             border-radius: 6px;
             margin-top: 10px;
@@ -30,7 +30,7 @@
             border-radius: 6px;
         }
         .title{
-            width: 800px;
+            width: 900px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -69,7 +69,7 @@
             height: 120px;
             margin: 5px;
             overflow: hidden;
-            border: 2px solid rgb(161, 154, 138, 0.8);
+            /* border: 2px solid rgb(161, 154, 138, 0.8); */
             border-radius: 6px;
             color: rgb(122, 116, 130);
             font-weight: bold;
@@ -155,11 +155,20 @@
 
     <script>
         //宣告
+        const monthName = ["January", "Febrary", "March", "April", "May", "June", "July", "Auguest", "September", "October", "November", "December"];
         const today = new Date() //今天
         let year = today.getFullYear() //年
         let month = today.getMonth() //月份 1月是0
 
-        let currentIndex
+        let Src;
+        let flowerArray = [];
+        for( let i = 0; i < 12; i++){
+                Src = "/2022/CalenderPic/m" + i + ".jpg"
+                flowerArray.push(Src)
+            }
+        flowerArray.push(Src);
+
+        let currentIndex;
         //DOM
         const yearMonthText = document.querySelector('.year-month')
         const dateArea = document.querySelector('tbody')
@@ -178,7 +187,7 @@
         function renderDate() {
             dateArea.innerHTML = ''
 
-            yearMonthText.innerText = `${year}年 - ${month + 1}月`
+            yearMonthText.innerText = `${year}年 - ${monthName[month]}`
 
             //這個月第一天禮拜幾?
             let firstDay = new Date(year, month, 1).getDay()
@@ -196,6 +205,7 @@
                 for (let col = 0; col < 7; col++) {
                     let td = document.createElement('div')
                     td.classList.add("square")
+                    td.setAttribute('style', 'border: 2px solid rgb(161, 154, 138, 0.8)')
                     if (row == 0 && col < firstDay) {
                         //上個月
                         td.innerText = ''
@@ -246,14 +256,6 @@
                 }
                 dateArea.appendChild(tr)
             }
-
-            let Src;
-            let flowerArray = [];
-            for( let i = 0; i < 12; i++){
-                Src = "/2022/CalenderPic/m" + i + ".jpg"
-                flowerArray.push(Src)
-            }
-            flowerArray.push(Src)
             flower.src=flowerArray[month]
         }
 
