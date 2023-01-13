@@ -137,11 +137,13 @@
     const score = document.querySelector('.score')
 
     startBtn.disabled = false;
+    reset.disabled = true;
 
     startBtn.addEventListener('click', function () {       //開始 
 
       renderBrick()
       startBtn.disabled = true;
+      reset.disabled = false;
     })
 
     reset.addEventListener('click', function () {            //reset
